@@ -7,7 +7,7 @@ MICROPHERRET is a machine learning-based for the prediction of 89 metabolic and 
 
 Create a conda environment with Python 3.9 and packages:
 ```
-conda create -n micropherret python=3.9 pandas biopython scikit-learn=1.1.2 numpy tensorflow tensorflow_addons
+conda create -n micropherret python=3.9 pandas biopython scikit-learn=1.1.2 numpy tensorflow
 pip install tensorflow-addons
 ```
 To enter the environment:
