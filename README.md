@@ -20,7 +20,7 @@ git clone https://github.com/BizzoTL/MICROPHERRET/
 ```
 The files needed to run the scripts can be retrieved here:  https://mega.nz/folder/FAVSRYTT#ElNlwvpSMuXSZu9NDoIp3w
 
-To run the scripts, create a folder called "MICROPHERRET" and add the files and script into it.
+To run the scripts, create a folder called "MICROPHERRET" and add the files and script into it, respecting the folder structure.
 
 ## Requirements
 
@@ -93,6 +93,54 @@ The code to run the script is available with the other files in the "Example" fo
 python3 create_new_class.py -g annotations/ --from_faprotax my_faprotax_db.csv  -f acetoclastic_methanogenesis 
 ```
 The resulting files will be the .sav and .scaler models that need to be put into the model folder in order to predict MICROPHERRET functions.
+
+## Update: MICROPHERRET for anaerobic digestion phenotypes
+
+MICROPHERRET has been updated to allow the prediction of 9 new phenotypes of the anaerobic digestion process, most of which are currently understudied and underrepresented in the literature. The models were trained following the **Class generation and refinement** strategy described above. 
+
+### Usage
+
+First check that the folders MICROPHERRET/matrix/Training_sets and MICROPHERRET/saved_models are not empty.
+
+Then, a new version of the script **predict_functions_v2.py** needs to be launched specifying the ```-ad``` parameter: 
+```
+python3 predict_functions_v2.py -i <path_csv_file or path_annotations_files> -o <path_output_folder> -ad
+```
+
+Parameters to use:
+
+- ```-i path_csv_file or path_annotations_files```
+  
+ File .csv storing KO information obtained launching get_annotation_matrix.ipynb (see example and explanation above). **UPDATE:** The path to the folder containing the .annotations files from EggNOG-mapper can be specified instead, the script will generate the desired matrix automatically.
+
+- ```-o path_csv_file or path_annotations_files```
+
+ Path to output folder
+
+- ```-ad ```
+
+ If specified, the new 9 anaerobic digestion specific models will be included in the prediction, resulting in **98 predicted phenotypes**!
+ Remove the ```-ad ``` argument if interested in the 89 phenotypes described in the paper, as done in the previous version (see above). 
+ If ```-ad ``` is specified, the script will take time to load all the different training datasets so you will need to be more patient than usual!
+ 
+ **Important**: the refined, more correct version of the acetoclastic methanogenesis model (described in the **Class refinement and generation** section as case study) is employed in this new version of the script!
+
+### Models performances
+
+Models were trained on custom-made datasets and evaluated with cross validation. Information on the number on the models, their performances (measured with Matthew's correlation coefficient) and the functional class size (No. genomes) used in the training set can be found below:
+
+|             Function            |  No. genomes  |  Average MCC   |  Status  |
+| ------------------------------- | ------------- | -------------- | -------- | 
+|        Starch degradation       |       51      |      0.85      |    New   |    
+|      Cellulose degradation      |       25      |      0.89      |  Refined |  
+|       Butanoate oxidation       |       22      |      0.98      |    New   | 
+|      Propionate oxidation       |       25      |      1.00      |    New   | 
+|         Homoacetogenesis        |       33      |      0.98      |    New   | 
+| Homoacetogenesis + CO oxidation |       42      |      0.80      |    New   | 
+|          CO oxidation           |       14      |      0.80      |    New   | 
+|        Hydrogen production      |       34      |      0.85      |    New   | 
+|         Sulfate reduction       |       30      |      1.00      |  Refined | 
+
 
 ## Citation
 
