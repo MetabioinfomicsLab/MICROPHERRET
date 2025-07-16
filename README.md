@@ -100,7 +100,7 @@ MICROPHERRET has been updated to allow the prediction of 9 new phenotypes of the
 
 ### Usage
 
-First check that the folders MICROPHERRET/matrix/Training_sets and MICROPHERRET/saved_models are not empty.
+First check that the folders MICROPHERRET/matrix/Training_sets and MICROPHERRET/saved_models are not empty. If so, download again the corresponding folders from Meta (see above).
 
 Then, a new version of the script **predict_functions_v2.py** needs to be launched specifying the ```-ad``` parameter: 
 ```
