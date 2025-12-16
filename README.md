@@ -16,7 +16,7 @@ conda activate micropherret
 ```
 Clone this git repository
 ```
-git clone https://github.com/BizzoTL/MICROPHERRET/
+git clone https://github.com/MetabioinfomicsLab/MICROPHERRET
 ```
 The files needed to run the scripts can be retrieved here:  https://mega.nz/folder/FAVSRYTT#ElNlwvpSMuXSZu9NDoIp3w
 
