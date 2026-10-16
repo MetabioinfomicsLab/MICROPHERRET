@@ -129,17 +129,17 @@ Parameters to use:
 
 Models were trained on custom-made datasets and evaluated with cross validation. Information on the number on the models, their performances (measured with Matthew's correlation coefficient) and the functional class size (No. genomes) used in the training set can be found below:
 
-|             Function            |  No. genomes  |  Average MCC   |  Status  |
-| ------------------------------- | ------------- | -------------- | -------- | 
-|        Starch degradation       |       51      |      0.85      |    New   |    
-|      Cellulose degradation      |       25      |      0.89      |  Refined |  
-|       Butanoate oxidation       |       22      |      0.98      |    New   | 
-|      Propionate oxidation       |       25      |      1.00      |    New   | 
-|         Homoacetogenesis        |       33      |      0.98      |    New   | 
-| Homoacetogenesis + CO oxidation |       42      |      0.80      |    New   | 
-|          CO oxidation           |       14      |      0.80      |    New   | 
-|        Hydrogen production      |       34      |      0.85      |    New   | 
-|         Sulfate reduction       |       30      |      1.00      |  Refined | 
+|             Function            |  No. genomes  |  Average MCC   |   Average F1  |  Status  |
+| ------------------------------- | ------------- | -------------- | ------------- | -------- | 
+|        Starch degradation       |       51      |      0.75      |      0.72     |    New   |    
+|      Cellulose degradation      |       25      |      0.87      |      0.86     |  Refined |  
+|       Butanoate oxidation       |       22      |      0.62      |      0.61     |    New   | 
+|      Propionate oxidation       |       25      |      0.69      |      0.68     |    New   | 
+|         Homoacetogenesis        |       33      |      0.92      |      0.92     |    New   | 
+|               WLP               |       42      |      0.77      |      0.76     |    New   | 
+|          CO oxidation           |       14      |      0.89      |      0.88     |    New   | 
+|        Hydrogen production      |       34      |      0.51      |      0.48     |    New   | 
+|         Sulfate reduction       |       30      |      1.00      |      1.00     |  Refined | 
 
 
 ## Citation
