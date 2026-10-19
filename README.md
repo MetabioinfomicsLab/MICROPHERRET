@@ -7,7 +7,7 @@ MICROPHERRET is a machine learning-based for the prediction of 89 metabolic and 
 
 Create a conda environment with Python 3.9 and packages:
 ```
-conda create -n micropherret python=3.9 pandas biopython scikit-learn=1.1.2 numpy tensorflow
+conda create -n micropherret python=3.9 pandas biopython scikit-learn=1.1.2 numpy tensorflow tqdm
 pip install tensorflow-addons
 ```
 To enter the environment:
@@ -104,7 +104,7 @@ First check that the folders MICROPHERRET/matrix/Training_sets and MICROPHERRET/
 
 Then, a new version of the script **predict_functions_v2.py** needs to be launched specifying the ```-ad``` parameter: 
 ```
-python3 predict_functions_v2.py -i <path_csv_file or path_annotations_files> -o <path_output_folder> -ad
+python3 predict_functions_v2.py -i <path_csv_file or path_annotations_files> -o <path_output_folder> -ad 
 ```
 
 Parameters to use:
@@ -122,6 +122,8 @@ Parameters to use:
  If specified, the new 9 anaerobic digestion specific models will be included in the prediction, resulting in **98 predicted phenotypes**!
  Remove the ```-ad ``` argument if interested in the 89 phenotypes described in the paper, as done in the previous version (see above). 
  If ```-ad ``` is specified, the script will take time to load all the different training datasets so you will need to be more patient than usual!
+
+ - ```--verbose ```
  
  **Important**: the refined, more correct version of the acetoclastic methanogenesis model (described in the **Class refinement and generation** section as case study) is employed in this new version of the script!
 
