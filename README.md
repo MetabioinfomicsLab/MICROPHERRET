@@ -96,11 +96,11 @@ The resulting files will be the .sav and .scaler models that need to be put into
 
 ## Update: MICROPHERRET for anaerobic digestion phenotypes
 
-MICROPHERRET has been updated to allow the prediction of 9 new phenotypes of the anaerobic digestion process, most of which are currently understudied and underrepresented in the literature. The models were trained following the **Class generation and refinement** strategy described above. 
+MICROPHERRET has been updated to allow the prediction of 9 new or refined anaerobic digestion phenotypes, most of which are currently understudied and underrepresented in the literature. The models were trained following the **Class generation and refinement** strategy described above. 
 
 ### Usage
 
-First check that the folders MICROPHERRET/matrix/Training_sets and MICROPHERRET/saved_models are not empty. If so, download again the corresponding folders from Meta (see above).
+First check that the folders MICROPHERRET/matrix/Training_sets and MICROPHERRET/saved_models are not empty. If so, download again the corresponding folders from MEGA (see above).
 
 Then, a new version of the script **predict_functions_v2.py** needs to be launched specifying the ```-ad``` parameter: 
 ```
